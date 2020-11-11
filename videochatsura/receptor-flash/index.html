@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="flowplayer-3.2.12.min.js"></script>
+</head>
+
+<body>
+    <div id="player" style="width:640px;height:480px;margin:0 auto;text-align:center"></div>
+    <script>
+        $f("player", "https://releases.flowplayer.org/swf/flowplayer-3.2.16.swf", {
+            clip: {
+                url: 'rtmp://hwbxy2.cloud.influxis.com/hwbxy2_live/_definst_/videochatsura',
+                scaling: 'fit',
+                provider: 'hddn'
+            },
+
+            plugins: {
+                hddn: {
+                    url: "flowplayer.rtmp-3.2.13.swf",
+                    netConnectionUrl: 'rtmp://hwbxy2.cloud.influxis.com/hwbxy2_live/_definst_/videochatsura'
+                }
+            },
+            canvas: {
+                backgroundGradient: 'none'
+            }
+        });
+    </script>
+</body>
+</html>
